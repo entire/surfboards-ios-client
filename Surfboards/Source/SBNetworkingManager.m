@@ -36,7 +36,7 @@
 - (void)queryForBoardsWithCompletionBlock:(void (^)(NSError *error, NSMutableArray *boards))completionBlock {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    [manager GET:@"http://shrouded-mesa-3796.herokuapp.com/boards"
+    [manager GET:@"http://somethingboards.herokuapp.com/boards"
       parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
              NSMutableArray *array = responseObject;

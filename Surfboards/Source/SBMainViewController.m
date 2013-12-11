@@ -13,13 +13,16 @@
 
 @end
 
-@implementation SBMainViewController
+@implementation SBMainViewController {
+    BOOL gettingRequest;
+}
 
 - (id)init
 {
     self = [super init];
     if (self) {
         //...
+        gettingRequest = NO;
     }
     return self;
 }
@@ -99,16 +102,21 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     __block NSMutableArray *newBoards;
-    [[SBNetworkingManager sharedManager] queryForBoardsWithCompletionBlock:^(NSError *error, NSMutableArray *boards) {
-        if (!error) {
-            newBoards = [NSMutableArray arrayWithArray:boards];
-
-            if (![newBoards isEqual:self.boards]) {
-                self.boards = newBoards;
-                [self.tableView reloadData];
+    
+    if (!gettingRequest) {
+        gettingRequest = YES;
+        [[SBNetworkingManager sharedManager] queryForBoardsWithCompletionBlock:^(NSError *error, NSMutableArray *boards) {
+            if (!error) {
+                newBoards = [NSMutableArray arrayWithArray:boards];
+                
+                if (![newBoards isEqual:self.boards]) {
+                    self.boards = newBoards;
+                    [self.tableView reloadData];
+                }
             }
-        }
-    }];
+            gettingRequest = NO;
+        }];
+    }
 }
 
 @end

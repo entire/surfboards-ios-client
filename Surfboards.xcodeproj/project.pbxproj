@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2A18A418248C4600B4C1D1 /* SBAddBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A18A318248C4600B4C1D1 /* SBAddBoardViewController.m */; };
 		2C7528E0182093AB0058F930 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7528DF182093AB0058F930 /* Foundation.framework */; };
 		2C7528E2182093AB0058F930 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7528E1182093AB0058F930 /* CoreGraphics.framework */; };
 		2C7528E4182093AB0058F930 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7528E3182093AB0058F930 /* UIKit.framework */; };
@@ -74,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C2A18A218248C4600B4C1D1 /* SBAddBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAddBoardViewController.h; sourceTree = "<group>"; };
+		2C2A18A318248C4600B4C1D1 /* SBAddBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAddBoardViewController.m; sourceTree = "<group>"; };
 		2C6850A51820B439002F0C2B /* SBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBConstants.h; sourceTree = "<group>"; };
 		2C7528DC182093AB0058F930 /* Surfboards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Surfboards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7528DF182093AB0058F930 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -250,6 +253,8 @@
 				2C752915182093ED0058F930 /* Networking */,
 				2C752911182093E40058F930 /* SBMainViewController.h */,
 				2C752912182093E40058F930 /* SBMainViewController.m */,
+				2C2A18A218248C4600B4C1D1 /* SBAddBoardViewController.h */,
+				2C2A18A318248C4600B4C1D1 /* SBAddBoardViewController.m */,
 			);
 			name = Source;
 			path = Surfboards/Source;
@@ -433,6 +438,7 @@
 			files = (
 				2C752960182095600058F930 /* AFURLSessionManager.m in Sources */,
 				2C75295A182095600058F930 /* AFURLConnectionOperation.m in Sources */,
+				2C2A18A418248C4600B4C1D1 /* SBAddBoardViewController.m in Sources */,
 				2C752968182095600058F930 /* UIButton+AFNetworking.m in Sources */,
 				2C75296C182095600058F930 /* UIProgressView+AFNetworking.m in Sources */,
 				2C752950182095600058F930 /* AFHTTPRequestOperation.m in Sources */,
